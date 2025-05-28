@@ -1,0 +1,19 @@
+{
+  "name": "microservicea",
+  "version": "1.0.0",
+  "description": "Takes JSON payload containing Pokemon data and fetches Pokemon stats from PokeAPI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/troms-112/3PugsRoastery.git"
+  },
+  "author": "Calvin Trombley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/troms-112/3PugsRoastery/issues"
+  },
+  "homepage": "https://github.com/troms-112/3PugsRoastery#readme"
+}
