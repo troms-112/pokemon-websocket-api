@@ -16,14 +16,12 @@
 require ('dotenv').config();
 const express   = require("express");
 const http      = require("http");
-const os        = require("os");
 const WebSocket = require('ws');
 const fetch     = require('node-fetch');
 const app       = express();
-const hostname  = os.hostname();
 
 
-// Bind the server to the localhost on port 8080
+// Bind the server to the localhost on port 5050
 const HOST = process.env.HOST || "localhost";
 const PORT = parseInt(process.env.PORT, 10) || 5050;
 
@@ -178,7 +176,7 @@ async function getEVProfile(name) {
 
 
 server.listen(PORT, () => {
-    console.log(`HTTP Server running at http://${HOST}:${PORT} & WebSocket ws://${HOST}:${PORT}`);
-    console.log(`WebSocket Server running at ws://${HOST}:${PORT}`);
+    console.log(`HTTP Server running at https://${HOST}:${PORT}`);
+    console.log(`WebSocket Server running at wss://${HOST}:${PORT}`);
 });
 
