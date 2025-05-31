@@ -15,12 +15,11 @@
 // node-fetch is needed to call PokeAPI
 require ('dotenv').config();
 const express   = require("express");
+const cors = require("cors");
 const http      = require("http");
-const os        = require("os");
 const WebSocket = require('ws');
 const fetch     = require('node-fetch');
 const app       = express();
-const hostname  = os.hostname();
 
 
 // Bind the server to the localhost on port 8080
@@ -28,6 +27,7 @@ const HOST = process.env.HOST || "localhost";
 const PORT = parseInt(process.env.PORT, 10) || 5050;
 
 // Middleware:
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
 //confirm backend is working
@@ -178,7 +178,7 @@ async function getEVProfile(name) {
 
 
 server.listen(PORT, () => {
-    console.log(`HTTP Server running at http://${HOST}:${PORT} & WebSocket ws://${HOST}:${PORT}`);
+    console.log(`HTTP Server running at http://${HOST}:${PORT}`);
     console.log(`WebSocket Server running at ws://${HOST}:${PORT}`);
 });
 
