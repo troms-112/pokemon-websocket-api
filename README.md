@@ -12,7 +12,7 @@ A simple WebSocket microservice that provides:
 ## Service URL
 #### Hosted with Render at:
 >
-> **wss://pokemon-stats-k0jo.onrender.com**
+> **https://pokemon-websocket-api.onrender.com**
 >
 
 
